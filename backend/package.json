@@ -15,8 +15,5 @@
     "nodemon": "^1.19.1",
     "sharp": "^0.22.1",
     "socket.io": "^2.2.0"
-  },
-  "engines": {
-    "node": "10.x"
   }
 }

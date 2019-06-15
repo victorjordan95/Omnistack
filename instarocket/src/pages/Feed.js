@@ -36,7 +36,7 @@ export default class Feed extends Component {
     }
 
     registerToSocket = () => {
-        const socket = io('http://localhost:3333');
+        const socket = io('http://192.168.15.26:3333');
 
         socket.on('post', newPost => {
             console.log('Socket')
@@ -72,7 +72,7 @@ export default class Feed extends Component {
                                 <Image source={more} />
                             </View>
 
-                            <Image style={styles.feedImage} source={{ uri: `http://localhost:3333/files/${item.image}` }} />
+                            <Image style={styles.feedImage} source={{ uri: `http://192.168.15.26:3333/files/${item.image}` }} />
                             <View style={styles.FeedItemFooter}>
                                 <View style={styles.actions}>
                                     <TouchableOpacity style={styles.action} onPress={() => this.handleLike(item._id)}>
@@ -129,7 +129,9 @@ const styles = StyleSheet.create({
 
     feedItem: {
         paddingHorizontal: 15,
-
+    },
+    FeedItemFooter: {
+        marginBottom: 15
     },
     actions: {
         flexDirection: 'row'
